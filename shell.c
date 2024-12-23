@@ -10,18 +10,16 @@
 
 #define MAXCOM 1000 // max number of letters to be supported
 #define MAXLIST 100 // max number of commands to be supported
+#define clear() printf("\033[H\033[J") // Clearing the shell using escape sequences
 
-// Clearing the shell using escape sequences
-#define clear() printf("\033[H\033[J")
-
-// Greeting shell during startup
+// Greeting
 void init_shell()
 {
     clear();
     printf("\n\n\n\n******************"
         "************************");
-    printf("\n\n\n\t****CUSTOM LINUX SHELL****");
-    printf("\n\n\t-WELCOME TO OUR PERSONALIZED SHELL:)-");
+    printf("\n\n\n\t****SHELL****");
+    printf("\n\n\t-WELCOME TO ARUSHI AND ARYAN'S CUSTOM SHELL:)-");
     printf("\n\n\n\n*******************"
         "***********************");
     char* username = getenv("USER");
@@ -31,7 +29,7 @@ void init_shell()
     clear();
 }
 
-// Function to take input
+// Take input
 int takeInput(char* str)
 {
     char* buf;
@@ -133,8 +131,8 @@ void execArgsPiped(char** parsed, char** parsedpipe)
 // Help command builtin
 void openHelp()
 {
-    puts("\n***WELCOME TO MY SHELL HELP***"
-        "\nCopyright @ Suprotik Dey"
+    puts("\n***WELCOME TO SHELL HELP DESK***"
+        "\nCopyright @ Arushi Vaidya, Aryan Gupta"
         "\n-Use the shell at your own risk..."
         "\nList of Commands supported:"
         "\n>cd"
